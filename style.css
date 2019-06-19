@@ -1,0 +1,109 @@
+#badge {
+  text-align:center;
+  width:100%;
+  color:white;
+  background-color: orange;
+}
+#leftbox {
+  float:left;
+  background: #EAEAEB;
+  width:25%;
+  height:700px;
+}
+#middlebox{
+  float:left;
+  background: #EAEAEB;
+  width:50%;
+  height:700px;
+}
+#rightbox{
+  float:right;
+  background: #EAEAEB;
+  width:25%;
+  height:700px;
+}
+h1{
+  color:orange;
+  text-align:center;
+}
+h3{
+  color:orange;
+  text-align:center;
+}
+#channelList{
+  overflow-y:auto;
+  height:85%;
+  float: left;
+  width: 100%;
+}
+
+#channelList li:hover{
+  color: black;
+  background: #EAEAEB
+}
+
+#usernameAndMsg{
+  float: right;
+  height: 20%;
+  width: 100%;
+}
+#addChannelDiv{
+  float: left;
+  height: 15%;
+  width: 100%;
+}
+
+#msgFeed{
+  height: 100%;
+  overflow-y:auto;
+  width: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+#msgFeed li:hover{
+  color: black;
+  background: #EAEAEB
+}
+#userList {
+  overflow-y:auto;
+  height:80%;
+  float: right;
+  width:100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+#CNameInput{
+  width:100%;
+  height:33%;
+}
+#CTopicInput{
+  width:100%;
+  height:33%;
+}
+#userNameInput{
+  width:100%;
+  height:25%;
+}
+#msgInput{
+  width:100%;
+  height: 50%;
+}
+#addMsgBtn{
+  border-radius: 2%;
+  width:100%;
+  height:25%;
+}
+#addChannelBtn{
+  border-radius: 2%;
+  width:100%;
+  height:34%;
+}
+#activeUserTag{
+  width:100%;
+  text-align:center;
+  background-color: orange;
+  color:white;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}

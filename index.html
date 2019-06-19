@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body >
+
+
+<h1>Simple Slack Clone</h1>
+
+<div id="channelData" >  </div>
+
+<div  id="badge">Click on a channel to join it or leave it</div>
+
+<div id="leftbox">
+  <ul  class ="list-group" id="channelList"  ></ul>
+  <div id="addChannelDiv" >
+    <input class="form-control" placeholder="Enter channel name:"  type="text" name="CName" id="CNameInput">
+    <input class="form-control" placeholder="Enter channel topic:" type="text" name="CTopic" id="CTopicInput">
+    <button id="addChannelBtn" onclick="addChannel()">
+        create new channel
+    </button>
+  </div>
+</div>
+
+<div id="middlebox">
+    <ul  id="msgFeed"> </ul>
+</div>
+
+<div id="rightbox">
+  <div id ="usernameAndMsg" >
+    <input class="form-control" placeholder="Username:"  type="text" id="userNameInput">
+    <input class="form-control" placeholder="Message:"  type="text" id="msgInput">
+    <button id="addMsgBtn" onclick="postMsg()">
+      send message
+    </button>
+</div>
+  <ul id="userList"></ul>
+</div>
+
+<h3>@flamestro</h3>
+
+</body>
+</html>
