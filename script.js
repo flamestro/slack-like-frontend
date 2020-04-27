@@ -159,7 +159,7 @@ function getMsgs() {
 
     if (actualChannelId > 0 && actualMsgs === "") {
         $.ajax({
-            url: "http://localhost/channels/" + actualChannelId + "/messages",
+            url: "http://localhost:8080/channels/" + actualChannelId + "/messages",
             type: 'GET',
             success: handleMsgs,
             contentType: "application/json",
