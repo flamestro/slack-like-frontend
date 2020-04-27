@@ -31,7 +31,7 @@ function addChannel() {
 function postChannel(name, topic) {
     postData = '{ "name" : "' + name + '","topic" : "' + topic + '"}'
     $.ajax({
-        url: "localhost:8080/channels",
+        url: "http://localhost:8080/channels",
         type: 'POST',
         data: postData,
         success: getChannelsOnPost,
@@ -59,7 +59,7 @@ function getChannelsOnPost() {
 //Get request which calls handleData on success
 function getChannels() {
     $.ajax({
-        url: "localhost:8080/channels",
+        url: "http://localhost:8080/channels",
         type: 'GET',
         contentType: "application/json",
         success: handleData,
@@ -126,7 +126,7 @@ function joinChannel(id) {
 function getChannel(id) {
 
     $.ajax({
-        url: "localhost:8080/channels/" + id,
+        url: "http://localhost:8080/channels/" + id,
         type: 'GET',
         contentType: "application/json",
         success: handleActualChannelInformation,
@@ -159,7 +159,7 @@ function getMsgs() {
 
     if (actualChannelId > 0 && actualMsgs === "") {
         $.ajax({
-            url: "localhost/channels/" + actualChannelId + "/messages",
+            url: "http://localhost/channels/" + actualChannelId + "/messages",
             type: 'GET',
             success: handleMsgs,
             contentType: "application/json",
@@ -168,7 +168,7 @@ function getMsgs() {
 
     } else if (actualChannelId > 0 && !(actualMsgs === "")) {
         $.ajax({
-            url: "localhost:8080/channels/" + actualChannelId + "/messages",
+            url: "http://localhost:8080/channels/" + actualChannelId + "/messages",
             type: 'GET',
             data: {lastSeenTimestamp: encodeURI(lastTimestamp)},
             success: handleNewMsgs,
@@ -270,7 +270,7 @@ function handleNewMsgs(data) {
 function postMsg() {
     postData = '{ "creator" : "' + actualUsername + '","content" : "' + $('#msgInput').val() + '"}'
     $.ajax({
-        url: "localhost:8080/channels/" + actualChannelId + "/messages",
+        url: "http://localhost:8080/channels/" + actualChannelId + "/messages",
         type: 'POST',
         data: postData,
         success: getMsgs,
@@ -289,7 +289,7 @@ function postMsg() {
 function getUsers() {
     if (actualChannelId > 0) {
         $.ajax({
-            url: "localhost:8080/channels/" + actualChannelId + "/users",
+            url: "http://localhost:8080/channels/" + actualChannelId + "/users",
             type: 'GET',
             success: handleUsers,
             contentType: "application/json",
