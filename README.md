@@ -1,3 +1,2 @@
 # SlackLikeFrontend
-Frontend of Slack clone (course project for university)
-#Useless without backend
+This is the static front-end for a chat app I made.
